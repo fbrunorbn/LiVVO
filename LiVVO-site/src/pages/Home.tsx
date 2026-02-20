@@ -1,0 +1,157 @@
+import { useEffect } from "react";
+import "./Home.css";
+import googlePlay from "../assets/logo-google-play.png";
+import appStore from "../assets/logo-App-store.png";
+import heroImage from "../assets/logo-segurando-celular-app-fundo-laranja.png";
+import ilustracao from "../assets/Ilutracao_home.png";
+import redevale from "../assets/Logo-redevale.png";
+import pin from "../assets/Logo-Pin.png";
+import usuario from "../assets/Logo-usuario.png";
+import carro from "../assets/Imagem-carro-motorista.jpeg";
+import empresaImg from "../assets/logo-empresa-web.png";
+
+export default function Home() {
+
+  useEffect(() => {
+    const section = document.querySelector(".stats");
+
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+
+        const counters = document.querySelectorAll(".counter");
+
+        counters.forEach(counter => {
+          const target = Number(counter.getAttribute("data-target"));
+          let current = 0;
+
+          const updateCounter = () => {
+            const increment = target / 100;
+
+            if (current < target) {
+              current += increment;
+              counter.textContent = Math.ceil(current).toString();
+              setTimeout(updateCounter, 20);
+            } else {
+              counter.textContent = target.toString();
+            }
+          };
+
+          updateCounter();
+        });
+
+        observer.disconnect();
+      }
+    }, { threshold: 0.4 });
+
+    if (section) observer.observe(section);
+
+  }, []);
+
+  return (
+    <main className="home">
+
+      {/* HERO */}
+      <section className="hero">
+
+        <div className="hero-image">
+          <img src={ilustracao} alt="Mulher usando aplicativo" />
+        </div>
+
+        <div className="hero-content">
+          <h1>
+            Na LiVVo, você chama, acompanha e transforma sua cidade
+          </h1>
+
+          <p>
+            Mobilidade, entregas e geração de renda com quem é da sua região.
+          </p>
+
+          <button className="hero-button">
+            Quero ser Motorista →
+          </button>
+        </div>
+
+      </section>
+
+
+      {/* ===== SEÇÃO DOS NÚMEROS ===== */}
+      <section className="stats">
+
+        {/* ESQUERDA */}
+        <div className="stats-left">
+          <h2>
+            A MOBILIDADE <br />
+            QUE ESTÁ TRANSFORMANDO <br />
+            O VALE DO <span>JAGUARIBE</span>
+          </h2>
+
+          <p className="hashtag">#VÁDELIVVO</p>
+        </div>
+
+        {/* CENTRO */}
+        <div className="stats-center">
+          <div className="hexagon">
+            <img src={redevale} alt="Rede Vale" />
+          </div>
+        </div>
+
+        {/* DIREITA */}
+        <div className="stats-right">
+
+          <div className="stat-item">
+            <img src={usuario} alt="Usuários" />
+            <div>
+              <h3>
+                <span className="counter" data-target="15">0</span>
+              </h3>
+              <p>Mil Usuários</p>
+            </div>
+          </div>
+
+          <div className="stat-item">
+            <img src={pin} alt="Cidades" />
+            <h3>
+                <span className="counter" data-target="33">0</span>
+                % das cidades
+            </h3>
+            <p>do Vale usam LiVVo</p>
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ===== SEÇÃO MOTORISTA ===== */}
+
+        <section className="motorista">
+
+        {/* LADO ESQUERDO */}
+        <div className="motorista-content">
+
+            <h2>
+            Seja um de nossos motoristas e venha lucrar com a gente!
+            </h2>
+
+            <p>
+            Baixe o aplicativo da Livvo e junte-se a milhares de 
+            motoristas que mudaram sua vida financeira!
+            </p>
+
+            <img 
+            src={googlePlay} 
+            alt="Disponível no Google Play" 
+            className="google-play-btn"
+            />
+
+        </div>
+
+        {/* LADO DIREITO */}
+        <div className="motorista-image">
+            <img src={carro} alt="Carro Livvo" />
+        </div>
+
+        </section>
+
+    </main>
+  );
+}

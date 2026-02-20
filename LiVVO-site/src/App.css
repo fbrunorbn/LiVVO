@@ -1,43 +1,10 @@
-body {
-  width: 100vw;
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.header {
-  text-align: center;
-  background: #fff;
-}
-
-.header a {
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #000;
-}
-
-.hero {
-  background: #ff5c00;
-  color: white;
-  padding: 100px 20px;
-}
-
-.section {
-  padding: 80px 20px;
-}
-
-.btn-primary {
-  display: inline-block;
-  margin-top: 20px;
-  background: black;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 30px;
-  text-decoration: none;
-}
-
-.footer {
-  text-align: center;
-  padding: 20px;
-  background: #f2f2f2;
+html, body, #root {
+  width: 100%;
+  height: 100%;
 }

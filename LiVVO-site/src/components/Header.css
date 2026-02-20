@@ -1,35 +1,54 @@
+/* HEADER CONTAINER */
 .header {
-  width: 100vw;
-  background: white;
-  border-bottom: 3px solid #ff5c00;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  z-index: 1000;
 }
 
+/* NAV PRINCIPAL */
 .nav {
-  margin: 0 auto;
-  display: flex;
+  padding: 0 20%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
 }
 
-.nav-left,
+/* GRUPOS ESQUERDA E DIREITA */
+.nav-left {
+  display: flex;
+  gap: 10%;
+  justify-content: flex-start;
+}
+
 .nav-right {
   display: flex;
-  gap: 30px;
+  gap: 10%;
+  justify-content: flex-start;
+  padding-left: 15%;
 }
 
+/* LINKS */
 .nav a {
   text-decoration: none;
-  color: black;
+  color: #000;
   font-weight: 600;
   font-size: 14px;
-  letter-spacing: 1px;
   transition: 0.3s;
 }
 
+/* HOVER */
 .nav a:hover {
-  color: #ff5c00;
+  color: #ff6a00;
 }
 
-.nav-logo img {
-  height: 45px;
+/* LOGO */
+.logo {
+  height: 40px;
+  display: flex;
+  justify-content: center;
 }

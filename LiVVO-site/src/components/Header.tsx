@@ -1,4 +1,6 @@
 import "./Header.css";
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 export default function Header() {
   return (
@@ -6,19 +8,19 @@ export default function Header() {
       <nav className="nav">
 
         <div className="nav-left">
-          <a href="#motorista">MOTORISTA</a>
-          <a href="#passageiro">PASSAGEIRO</a>
-          <a href="#empresa">EMPRESA</a>
+          <a href="/#motorista">MOTORISTA</a>
+          <a href="/#passageiro">PASSAGEIRO</a>
+          <a href="/#empresa">EMPRESA</a>
         </div>
 
-        <div className="nav-logo">
-          <img src="/logo.png" alt="LiVVo Logo" />
+        <div className="logo">
+          <img src={logo} alt="Livvo Logo" />
         </div>
 
         <div className="nav-right">
-          <a href="#sobre">SOBRE NÓS</a>
-          <a href="#faq">FAQ</a>
-          <a href="#suporte">SUPORTE</a>
+          <Link to="/sobre">SOBRE NÓS</Link>
+          <Link to="/fac/motorista">FAC</Link>
+          <Link to="/suporte">SUPORTE</Link>
         </div>
 
       </nav>
