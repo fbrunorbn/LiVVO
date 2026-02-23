@@ -9,6 +9,7 @@ import pin from "../assets/Logo-Pin.png";
 import usuario from "../assets/Logo-usuario.png";
 import carro from "../assets/Imagem-carro-motorista.jpeg";
 import empresaImg from "../assets/logo-empresa-web.png";
+import whats from "../assets/logo-whats.png";
 
 export default function Home() {
 
@@ -123,7 +124,7 @@ export default function Home() {
 
       {/* ===== SEÇÃO MOTORISTA ===== */}
 
-        <section className="motorista">
+        <section className="motorista" id="motorista">
 
         {/* LADO ESQUERDO */}
         <div className="motorista-content">
@@ -148,6 +149,72 @@ export default function Home() {
         {/* LADO DIREITO */}
         <div className="motorista-image">
             <img src={carro} alt="Carro Livvo" />
+        </div>
+
+        </section>
+
+        {/* ===== SEÇÃO APP ===== */}
+
+        <section className="app-section" id="passageiro">
+
+        {/* LADO ESQUERDO */}
+        <div className="app-image-wrapper">
+            <div className="app-image-box">
+            <img src={heroImage} alt="Pessoa usando app LiVVo" />
+            </div>
+        </div>
+
+        {/* LADO DIREITO */}
+        <div className="app-content">
+
+            <h2>
+            Vá além, sem limites.<br />
+            Vá de LiVVo!
+            </h2>
+
+            <p>
+            Movimente-se pela cidade com rapidez, segurança e economia.
+            Do trabalho para casa, do centro ao bairro,
+            a LiVVo conecta você todos os dias.
+            </p>
+
+            <p className="download-text">
+            Baixe agora na Google Play ou App Store.
+            </p>
+
+            <div className="store-buttons">
+            <img src={googlePlay} alt="Google Play" />
+            <img src={appStore} alt="App Store" />
+            </div>
+
+        </div>
+
+        </section>
+
+        {/* ===== SEÇÃO EMPRESA ===== */}
+
+        <section 
+        className="empresa-section" id="empresa"
+        style={{ backgroundImage: `url(${empresaImg})` }}
+        >
+
+        <div className="empresa-overlay">
+
+            <div className="empresa-content">
+
+            {/* TEXTO ESQUERDA */}
+            <h2>
+                Sua empresa precisa de serviços de transporte?
+            </h2>
+
+            {/* BOTÃO DIREITA */}
+            <a href="#" className="empresa-btn">
+                Entre em contato
+                <img src={whats} alt="WhatsApp" />
+            </a>
+
+            </div>
+
         </div>
 
         </section>

@@ -13,13 +13,21 @@ export default function Header() {
           <a href="/#empresa">EMPRESA</a>
         </div>
 
-        <div className="logo">
+        <Link to="/" className="logo">
           <img src={logo} alt="Livvo Logo" />
-        </div>
+        </Link>
 
         <div className="nav-right">
           <Link to="/sobre">SOBRE NÓS</Link>
-          <Link to="/fac/motorista">FAC</Link>
+          <div className="dropdown">
+            <span className="dropdown-title">FAC</span>
+            <div className="dropdown-menu">
+              <Link to="/fac/motorista">FAC – Motorista</Link>
+              <Link to="/fac/passageiro">FAC – Passageiro</Link>
+              <Link to="/fac/termo-motorista">Termos de Uso - Motorista</Link>
+              <Link to="/fac/termo-passageiro">Termos de Uso - Passageiro</Link>
+            </div>
+          </div>
           <Link to="/suporte">SUPORTE</Link>
         </div>
 

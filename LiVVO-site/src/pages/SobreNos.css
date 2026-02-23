@@ -1,0 +1,50 @@
+/* ================= SOBRE ================= */
+
+.sobre {
+  padding-top: 80px; /* espaço para header fixo */
+  background: #f8f8f8;
+}
+
+.sobre-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 80px 8%;
+}
+
+/* IMAGEM */
+
+.sobre-image {
+  flex: 0 0 50%;
+}
+
+.sobre-image img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* TEXTO */
+
+.sobre-content {
+  flex: 0 0 50%;
+}
+
+.sobre-content h1 {
+  font-size: 40px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.sobre-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  color: #444;
+}
+
+.sobre-highlight {
+  font-weight: 600;
+  margin-top: 20px;
+}

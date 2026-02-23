@@ -1,0 +1,82 @@
+/* Container principal */
+.termos-de-uso-motorista,
+.termos-de-uso-passageiro {
+  max-width: 900px;
+  margin: 140px auto 80px auto; /* espaço para header fixo */
+  padding: 0 24px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.8;
+  color: #2c2c2c;
+}
+
+/* Título principal */
+.termos-de-uso-motorista h1,
+.termos-de-uso-passageiro h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #111;
+}
+
+/* Subtítulo */
+.termos-de-uso-motorista > h2:first-of-type,
+.termos-de-uso-passageiro > h2:first-of-type {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #666;
+}
+
+/* Seções */
+.termos-de-uso-motorista section,
+.termos-de-uso-passageiro section {
+  margin-bottom: 35px;
+}
+
+/* Títulos das cláusulas */
+.termos-de-uso-motorista section h2,
+.termos-de-uso-passageiro section h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #ff5a00; /* cor da marca */
+}
+
+/* Parágrafos */
+.termos-de-uso-motorista p,
+.termos-de-uso-passageiro p {
+  margin-bottom: 14px;
+  text-align: justify;
+  font-size: 15px;
+}
+
+/* Lista com bolinhas estilizadas */
+.termos-de-uso-motorista p br,
+.termos-de-uso-passageiro p br {
+  margin-bottom: 6px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .termos-de-uso-motorista,
+  .termos-de-uso-passageiro {
+    margin: 120px 20px 60px 20px;
+  }
+
+  .termos-de-uso-motorista h1,
+  .termos-de-uso-passageiro h1 {
+    font-size: 24px;
+  }
+
+  .termos-de-uso-motorista section h2,
+  .termos-de-uso-passageiro section h2 {
+    font-size: 16px;
+  }
+
+  .termos-de-uso-motorista p,
+  .termos-de-uso-passageiro p {
+    font-size: 14px;
+  }
+}
