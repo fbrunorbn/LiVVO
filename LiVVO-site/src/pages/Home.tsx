@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import "./Home.css";
+import { Button } from "antd";
+import { ArrowRightOutlined } from "@ant-design/icons";
 import googlePlay from "../assets/logo-google-play.png";
 import appStore from "../assets/logo-App-store.png";
 import heroImage from "../assets/logo-segurando-celular-app-fundo-laranja.png";
@@ -63,13 +65,43 @@ export default function Home() {
             Na LiVVo, você chama, acompanha e transforma sua cidade
           </h1>
 
-          <p>
+          <p style={{ fontSize: "18px" }}>
             Mobilidade, entregas e geração de renda com quem é da sua região.
           </p>
 
-          <button className="hero-button">
-            Quero ser Motorista →
-          </button>
+          <Button
+            href="#motorista"
+            size="large"
+            type="default"
+            style={{
+              background: "#d9d9d9",
+              color: "black",
+              borderRadius: "50px",
+              fontSize: "22px",
+              fontWeight: "bold",
+              padding: "0 24px",
+              width: "55%",
+            }}
+            icon={
+              <span
+                style={{
+                  background: "black",
+                  color: "white",
+                  borderRadius: "50%",
+                  width: "36px",
+                  height: "36px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginLeft: "0px",
+                }}
+              >
+                <ArrowRightOutlined style={{ fontSize: "20px" }} />
+              </span>
+            }
+          >
+            Quero ser Motorista
+          </Button>
         </div>
 
       </section>
@@ -83,7 +115,7 @@ export default function Home() {
           <h2>
             A MOBILIDADE <br />
             QUE ESTÁ TRANSFORMANDO <br />
-            O VALE DO <span>JAGUARIBE</span>
+            O VALE DO <br /> <span>JAGUARIBE</span>
           </h2>
 
           <p className="hashtag">#VÁDELIVVO</p>
