@@ -1,0 +1,51 @@
+.fac-container {
+  padding: 120px 10%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.fac-container h1 {
+  margin-bottom: 40px;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Remove fundo padrão */
+.ant-collapse {
+  background: transparent !important;
+}
+
+/* Cada item vira um card */
+.ant-collapse-item {
+  border: none !important;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+/* Header */
+.ant-collapse-header {
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  padding: 20px !important;
+}
+
+/* Conteúdo */
+.ant-collapse-content {
+  border-top: none !important;
+}
+
+.ant-collapse-content-box {
+  padding: 0 20px 20px 20px !important;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Quando aberto */
+.ant-collapse-item-active {
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}

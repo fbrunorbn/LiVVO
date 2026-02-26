@@ -80,7 +80,7 @@ export default function Home() {
               fontSize: "22px",
               fontWeight: "bold",
               padding: "0 24px",
-              width: "55%",
+              width: "270px",
             }}
             icon={
               <span
@@ -216,7 +216,7 @@ export default function Home() {
 
             <div className="store-buttons">
             <img src={googlePlay} alt="Google Play" />
-            <img src={appStore} alt="App Store" />
+            <img className="appStore" src={appStore} alt="App Store" />
             </div>
 
         </div>

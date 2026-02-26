@@ -11,25 +11,39 @@
 
 /* NAV PRINCIPAL */
 .nav {
-  padding: 0 20%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
   height: 100%;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
+  display: flex;
+  align-items: center;  
 }
 
-/* GRUPOS ESQUERDA E DIREITA */
-.nav-left {
+.nav-left,
+.nav-right {
+  flex: 1;               /* 🔥 cada lado ocupa metade */
   display: flex;
-  gap: 10%;
-  justify-content: flex-start;
+  gap: 30px;
+}
+
+.nav-left {
+  justify-content: flex-end;
+  padding-right: 40px;  /* 🔥 afasta da logo */
 }
 
 .nav-right {
-  display: flex;
-  gap: 10%;
   justify-content: flex-start;
-  padding-left: 15%;
+  padding-left: 40px;   /* 🔥 afasta da logo */
+}
+
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 70%;
 }
 
 /* LINKS */
@@ -46,29 +60,19 @@
   color: #ff6a00;
 }
 
-/* LOGO */
-.logo {
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.logo img {
-  height: 100%;
-}
-
 /* ===== DROPDOWN FAC ===== */
 
 .dropdown {
   position: relative;
+  display: flex;
+  align-items: center;  /* 🔥 alinha igual aos links */
   cursor: pointer;
-  display: inline-block;
 }
 
 .dropdown-title {
   font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s;
 }
 
 .dropdown-menu {
@@ -106,17 +110,8 @@
 
 /* ================= MOBILE HEADER ================= */
 @media (max-width: 768px) {
-
-  .nav-desktop {
+  .nav-left,
+  .nav-right {
     display: none;
   }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .nav {
-    padding: 0 20px;
-  }
-
 }

@@ -20,15 +20,13 @@ export default function Footer() {
           <a href="/#motorista">Motorista</a>
           <a href="/#passageiro">Passageiro</a>
           <a href="/#empresa">Empresa</a>
-          <a href="/sobre-nos">Sobre Nós</a>
-          <a href="/faq">FAQ</a>
+          <a href="/sobre">Sobre Nós</a>
           <a href="/suporte">Suporte</a>
         </div>
 
         {/* DIREITA - REDES */}
         <div className="footer-social">
           <a href="#"><FacebookOutlined /></a>
-          <a href="#"><YoutubeOutlined /></a>
           <a href="#"><InstagramOutlined /></a>
         </div>
 
