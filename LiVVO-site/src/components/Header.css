@@ -103,3 +103,20 @@
 .dropdown:hover .dropdown-menu {
   display: flex;
 }
+
+/* ================= MOBILE HEADER ================= */
+@media (max-width: 768px) {
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav {
+    padding: 0 20px;
+  }
+
+}

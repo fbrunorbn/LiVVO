@@ -67,3 +67,28 @@
   font-size: 14px;
   color: #666;
 }
+
+/* ================= MOBILE FOOTER ================= */
+@media (max-width: 768px) {
+
+  .footer-top {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 13px;
+  }
+
+}

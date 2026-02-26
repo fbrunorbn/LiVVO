@@ -80,3 +80,21 @@
     font-size: 14px;
   }
 }
+
+/* ================= MOBILE FAC MOTORISTA ================= */
+@media (max-width: 768px) {
+
+  .fac-container {
+    padding: 100px 20px 60px 20px;
+  }
+
+  .fac-container h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .ant-collapse {
+    font-size: 14px;
+  }
+
+}

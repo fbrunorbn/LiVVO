@@ -12,3 +12,8 @@ html, body, #root {
 html {
   scroll-behavior: smooth;
 }
+
+/* ================= GLOBAL FIX ================= */
+body {
+  overflow-x: hidden;
+}
