@@ -35,6 +35,42 @@
   gap: 20px;
 }
 
+.hero-btn {
+  background: #d9d9d9;
+  color: black;
+
+  border-radius: 50px;
+
+  height: 50px;              /* 🔥 altura menor */
+  padding: 0 20px;
+  width: 240px;              /* 🔥 largura menor */
+
+  font-size: 18px;           /* 🔥 texto menor */
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  transition: all 0.2s ease; /* animação suave */
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hero-btn:active {
+  transform: scale(0.95);  /* 🔥 efeito de pressionar */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.hero-btn:hover .hero-btn-icon {
+  transform: translateX(4px);
+  transition: transform 0.2s ease;
+}
+
 
 /* ================= STATS ================= */
 
@@ -70,8 +106,8 @@
 }
 .stats-center{
   height: 100%;
-
 }
+
 .stats-right{
   height: 100%;
   align-content: center;
@@ -406,117 +442,222 @@
 /* ================= MOBILE HOME ================= */
 @media (max-width: 768px) {
 
-  /* HERO */
+  /* Ajuste geral */
+  .home {
+    height: auto;        /* 🔥 remove altura fixa */
+    min-height: auto;
+  }
+
+  section {
+    padding: 60px 20px; /* 🔥 reduz padding geral */
+  }
+
+  /* ================= HERO ================= */
   .hero {
+    display: flex;
     flex-direction: column;
-    height: auto;
-    margin-top: 60px;
-  }
-
-  .hero-image,
-  .hero-content {
-    flex: 1 1 100%;
-    width: 100%;
-  }
-
-  .hero-content {
-    padding: 40px 20px;
+    align-items: center;
     text-align: center;
+
+    width: 100%;
+    max-width: 100%;
+    padding: 80px 20px 60px;
+    margin: 0;
+
+    height: auto;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 40px;
+  }
+
+  .hero-content{
+    padding: 20px 0px;
+    gap: 20px;
     align-items: center;
   }
-
   .hero-content h1 {
     font-size: 26px;
     line-height: 1.3;
   }
 
   .hero-content p {
-    font-size: 16px;
+    font-size: 12px !important;
   }
 
-  .hero-button {
+  .hero-btn-icon {
+    background: black;
+    color: white;
+
+    width: 28px;      /* 🔥 menor */
+    height: 28px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;  /* 🔥 ícone menor */
+  }
+
+  /* ================= STATS ================= */
+
+  .stats {
+    display: flex;              /* 🔥 isso que faltava */
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height: auto;        /* 🔥 remove altura fixa */
+    min-height: auto;
+  }
+
+  .stats-left,
+  .stats-center,
+  .stats-right {
     width: 100%;
   }
 
-  /* STATS */
-  .stats {
-    grid-template-columns: 1fr;
-    height: auto;
-    padding: 60px 20px;
-    gap: 40px;
-    text-align: center;
+  .stats-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
   }
 
   .hexagon {
-    width: 220px;
-    height: 220px;
+    width: 90%;
+    max-width: 320px;
+    aspect-ratio: auto;   /* 🔥 remove proporção forçada */
+    height: auto;
+  }
+
+  .hexagon img {
+    width: 100%;
+    height: auto;         /* 🔥 mantém proporção real */
+    object-fit: contain;  /* 🔥 mostra imagem inteira */
+  }
+  .stats-left h2 {
+    font-size: 22px;
+  }
+
+  .stats-right {
+    padding-top: 30px;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .stat-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .stat-item img {
-    width: 110px;
+    width: 120px;
+  }
+  .stat-item h3 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 400;
+    font-family: 'Jersey 25', sans-serif;
   }
 
-  /* MOTORISTA */
+  .stat-item p {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+  }
+  /* ================= MOTORISTA ================= */
+
   .motorista {
     flex-direction: column;
-    height: auto;
-  }
-
-  .motorista-content,
-  .motorista-image {
-    width: 100%;
-  }
-
-  .motorista-content {
-    padding: 40px 20px;
+    gap: 30px;
     text-align: center;
-    align-items: center;
+    height: auto;        /* 🔥 remove altura fixa */
+    min-height: auto;
+  }
+
+  .motorista-image img {
+    width: 100%;
+    border-radius: 18px;
+  }
+
+  .motorista-content h2 {
+    font-size: 22px;
   }
 
   .google-play-btn {
-    width: 150px;
+    width: 200px;
   }
 
-  /* APP SECTION */
+  /* ================= APP SECTION ================= */
+
   .app-section {
     flex-direction: column;
-    height: auto;
-    padding: 60px 20px;
-    text-align: center;
     gap: 40px;
+    text-align: center;
+    height: auto;        /* 🔥 remove altura fixa */
+    min-height: auto;
+    padding-bottom: 200px;
   }
 
-  .app-image-wrapper,
-  .app-content {
-    width: 100%;
+  .app-image-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .app-image-box img {
+    width: 85%;
+    max-width: 300px;
+  }
+
+  .app-content h2 {
+    font-size: 22px;
   }
 
   .store-buttons {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
   }
 
   .store-buttons img {
     width: 140px;
   }
 
-  /* EMPRESA */
+  /* ================= EMPRESA ================= */
+
   .empresa-section {
-    height: auto;
+    background-position: center;
+    background-size: cover;
+    height: auto;        /* 🔥 remove altura fixa */
+    min-height: auto;
   }
 
   .empresa-content {
     flex-direction: column;
-    gap: 30px;
     text-align: center;
-    padding: 40px 20px;
+    gap: 25px;
   }
 
   .empresa-content h2 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .empresa-btn {
-    width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+    font-size: 15px;
   }
 
 }

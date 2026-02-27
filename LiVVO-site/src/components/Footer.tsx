@@ -1,7 +1,7 @@
 import "./Footer.css";
 import logo from "../assets/logo.png"; // ajuste nome real
 
-import { FacebookOutlined, InstagramOutlined, YoutubeOutlined } from "@ant-design/icons";
+import { FacebookOutlined, InstagramOutlined } from "@ant-design/icons";
 
 export default function Footer() {
   return (

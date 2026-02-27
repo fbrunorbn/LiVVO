@@ -16,30 +16,32 @@
   padding: 0 5%;
   height: 100%;
   display: flex;
-  align-items: center;  
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav-left,
 .nav-right {
-  flex: 1;               /* 🔥 cada lado ocupa metade */
+  flex: 1;
   display: flex;
   gap: 30px;
 }
 
 .nav-left {
   justify-content: flex-end;
-  padding-right: 40px;  /* 🔥 afasta da logo */
+  padding-right: 40px;
 }
 
 .nav-right {
   justify-content: flex-start;
-  padding-left: 40px;   /* 🔥 afasta da logo */
+  padding-left: 40px;
 }
 
 .logo {
   height: 100%;
   display: flex;
   align-items: center;
+  z-index: 1001;
 }
 
 .logo img {
@@ -55,24 +57,21 @@
   transition: 0.3s;
 }
 
-/* HOVER */
 .nav a:hover {
   color: #ff6a00;
 }
 
-/* ===== DROPDOWN FAC ===== */
-
+/* DROPDOWN */
 .dropdown {
   position: relative;
   display: flex;
-  align-items: center;  /* 🔥 alinha igual aos links */
+  align-items: center;
   cursor: pointer;
 }
 
 .dropdown-title {
   font-weight: 600;
   font-size: 14px;
-  transition: 0.3s;
 }
 
 .dropdown-menu {
@@ -84,7 +83,6 @@
   border-radius: 8px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   padding: 10px 0;
-  font-weight: 600;
   display: none;
   flex-direction: column;
   z-index: 999;
@@ -92,26 +90,119 @@
 
 .dropdown-menu a {
   padding: 10px 16px;
-  text-decoration: none;
   font-size: 14px;
-  transition: background 0.2s;
   color: #000;
-  font-weight: 600;
 }
 
-.dropdown-menu a:active {
-  background: #f5f5f5;
-}
-
-/* Mostrar ao passar o mouse */
 .dropdown:hover .dropdown-menu {
   display: flex;
 }
 
-/* ================= MOBILE HEADER ================= */
+/* ================= HAMBURGUER ================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  transition: 0.3s;
+}
+
+/* Animação X */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ================= OVERLAY ================= */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+  z-index: 998;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ================= MOBILE MENU ================= */
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  max-width: 320px;
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 30px 40px 30px;
+  gap: 22px;
+  transition: right 0.35s cubic-bezier(.77,0,.18,1);
+  box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f1f1;
+  transition: 0.25s;
+  text-transform: uppercase;
+}
+
+.mobile-menu a:hover {
+  color: #ff6a00;
+  transform: translateX(6px);
+}
+
+/* Melhor botão hamburguer */
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #111;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* ================= MOBILE ================= */
+
 @media (max-width: 768px) {
+
   .nav-left,
   .nav-right {
     display: none;
   }
+
+  .hamburger {
+    display: flex;
+  }
+
 }

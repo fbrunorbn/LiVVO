@@ -6,12 +6,13 @@ import googlePlay from "../assets/logo-google-play.png";
 import appStore from "../assets/logo-App-store.png";
 import heroImage from "../assets/logo-segurando-celular-app-fundo-laranja.png";
 import ilustracao from "../assets/Ilutracao_home.png";
-import redevale from "../assets/Logo-redevale.png";
 import pin from "../assets/Logo-Pin.png";
 import usuario from "../assets/Logo-usuario.png";
 import carro from "../assets/Imagem-carro-motorista.jpeg";
 import empresaImg from "../assets/logo-empresa-web.png";
 import whats from "../assets/logo-whats.png";
+import redevaleDesktop from "../assets/logo-redevale.png";
+import redevaleMobile from "../assets/logo-redevale-mobile.png";
 
 export default function Home() {
 
@@ -73,30 +74,10 @@ export default function Home() {
             href="#motorista"
             size="large"
             type="default"
-            style={{
-              background: "#d9d9d9",
-              color: "black",
-              borderRadius: "50px",
-              fontSize: "22px",
-              fontWeight: "bold",
-              padding: "0 24px",
-              width: "270px",
-            }}
+            className="hero-btn"
             icon={
-              <span
-                style={{
-                  background: "black",
-                  color: "white",
-                  borderRadius: "50%",
-                  width: "36px",
-                  height: "36px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginLeft: "0px",
-                }}
-              >
-                <ArrowRightOutlined style={{ fontSize: "20px" }} />
+              <span className="hero-btn-icon">
+                <ArrowRightOutlined />
               </span>
             }
           >
@@ -124,7 +105,16 @@ export default function Home() {
         {/* CENTRO */}
         <div className="stats-center">
           <div className="hexagon">
-            <img src={redevale} alt="Rede Vale" />
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcSet={redevaleMobile}
+              />
+              <img
+                src={redevaleDesktop}
+                alt="Rede Vale"
+              />
+            </picture>
           </div>
         </div>
 
@@ -143,11 +133,13 @@ export default function Home() {
 
           <div className="stat-item">
             <img src={pin} alt="Cidades" />
-            <h3>
+            <div>
+              <h3>
                 <span className="counter" data-target="33">0</span>
                 % das cidades
-            </h3>
-            <p>do Vale usam LiVVo</p>
+              </h3>
+              <p>do Vale usam LiVVo</p>
+            </div>
           </div>
 
         </div>
