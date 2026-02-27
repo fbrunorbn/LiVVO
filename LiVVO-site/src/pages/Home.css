@@ -587,6 +587,9 @@
     min-height: auto;
   }
 
+  .motorista-content{
+    padding: 0px;
+  }
   .motorista-image img {
     width: 100%;
     border-radius: 18px;
