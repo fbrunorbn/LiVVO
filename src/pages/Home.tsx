@@ -10,8 +10,8 @@ import pin from "../assets/Logo-Pin.png";
 import usuario from "../assets/Logo-usuario.png";
 import carro from "../assets/Imagem-carro-motorista.jpeg";
 import whats from "../assets/logo-whats.png";
-import redevaleDesktop from "../assets/logo-redevale.png";
-import redevaleMobile from "../assets/logo-redevale-mobile.png";
+import redevaleDesktop from "../assets/Logo-redevale.png";
+import redevaleMobile from "../assets/Logo-redevale-mobile.png";
 
 export default function Home() {
 
