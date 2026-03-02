@@ -26,8 +26,13 @@ export default function Footer() {
 
         {/* DIREITA - REDES */}
         <div className="footer-social">
-          <a href="#"><FacebookOutlined /></a>
-          <a href="#"><InstagramOutlined /></a>
+          <a href="https://www.facebook.com/vaidelivvo"
+              target="_blank"
+              rel="noopener noreferrer">
+            <FacebookOutlined /></a>
+          <a href="https://www.instagram.com/vaidelivvo?igsh=b3RzN3FqYWhhZ2xp"
+              target="_blank"
+              rel="noopener noreferrer"><InstagramOutlined /></a>
         </div>
 
       </div>

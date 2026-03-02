@@ -16,8 +16,22 @@ export default function Suporte() {
           <p>VIA WHATSAPP</p>
 
           <div className="suporte-buttons">
-            <a href="#" className="suporte-btn">Clique aqui - Atendimento 1</a>
-            <a href="#" className="suporte-btn">Clique aqui - Atendimento 2</a>
+            <a
+              href="https://wa.me/558882293431"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="suporte-btn"
+            >
+              Clique aqui - Atendimento 1
+            </a>
+            <a
+              href="https://wa.me/5588921681006"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="suporte-btn"
+            >
+              Clique aqui - Atendimento 2
+            </a>
           </div>
         </div>
 

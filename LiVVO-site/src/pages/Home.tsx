@@ -9,8 +9,6 @@ import ilustracao from "../assets/Ilutracao_home.png";
 import pin from "../assets/Logo-Pin.png";
 import usuario from "../assets/Logo-usuario.png";
 import carro from "../assets/Imagem-carro-motorista.jpeg";
-import empresaImg from "../assets/logo-empresa-web.png";
-import empresaImgMobile from "../assets/logo-empresa-mobile.png";
 import whats from "../assets/logo-whats.png";
 import redevaleDesktop from "../assets/logo-redevale.png";
 import redevaleMobile from "../assets/logo-redevale-mobile.png";
@@ -163,11 +161,17 @@ export default function Home() {
             motoristas que mudaram sua vida financeira!
             </p>
 
-            <img 
-            src={googlePlay} 
-            alt="Disponível no Google Play" 
-            className="google-play-btn"
-            />
+            <a
+              href="https://play.google.com/store/apps/details?id=br.com.apps88.taxi.drivermachine&pcampaignid=web_share"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={googlePlay}
+                alt="Disponível no Google Play"
+                className="google-play-btn"
+              />
+            </a>
 
         </div>
 
@@ -208,8 +212,21 @@ export default function Home() {
             </p>
 
             <div className="store-buttons">
-            <img src={googlePlay} alt="Google Play" />
-            <img className="appStore" src={appStore} alt="App Store" />
+              <a
+                href="https://play.google.com/store/search?q=Livvo%20passageiro&c=apps&hl=pt_BR"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={googlePlay} alt="Google Play" />
+              </a>
+              
+              <a
+                href="https://apps.apple.com/br/app/livvo-passageiro/id6739433092"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img className="appStore" src={appStore} alt="App Store" />
+              </a>
             </div>
 
         </div>
@@ -230,9 +247,14 @@ export default function Home() {
             </h2>
 
             {/* BOTÃO DIREITA */}
-            <a href="#" className="empresa-btn">
-                Entre em contato
-                <img src={whats} alt="WhatsApp" />
+            <a
+              href="https://wa.me/558882293431"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="empresa-btn"
+            >
+              Entre em contato
+              <img src={whats} alt="WhatsApp" />
             </a>
 
             </div>
