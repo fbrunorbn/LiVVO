@@ -583,16 +583,27 @@
     flex-direction: column;
     gap: 30px;
     text-align: center;
+    justify-content: center;
     height: auto;        /* 🔥 remove altura fixa */
     min-height: auto;
+    padding-bottom: 0px;
   }
 
   .motorista-content{
     padding: 0px;
   }
-  .motorista-image img {
+  .motorista-image {
     width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .motorista-image img {
+    width: 80%;
     border-radius: 18px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   .motorista-content h2 {
@@ -600,7 +611,7 @@
   }
 
   .google-play-btn {
-    width: 200px;
+    width: 150px;
   }
 
   /* ================= APP SECTION ================= */
@@ -609,25 +620,44 @@
     flex-direction: column;
     gap: 40px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     height: auto;        /* 🔥 remove altura fixa */
     min-height: auto;
-    padding-bottom: 200px;
+    padding: 60px 20px;
+    background-color: #ffffff;
   }
 
   .app-image-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
+  .app-image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 40px;
+    overflow: hidden;
+  }
   .app-image-box img {
-    width: 85%;
-    max-width: 300px;
+    width: 80%;
+    border-radius: 40px;
   }
 
   .app-content h2 {
     font-size: 22px;
   }
-
+  .app-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    color: black;
+  }
   .store-buttons {
     justify-content: center;
     flex-wrap: wrap;
@@ -641,16 +671,29 @@
   /* ================= EMPRESA ================= */
 
   .empresa-section {
-    background-position: center;
-    background-size: cover;
-    height: auto;        /* 🔥 remove altura fixa */
-    min-height: auto;
+    background-image: url("../assets/logo-empresa-mobile.png");
+    background-size: cover;      /* 👈 preenche tudo */
+    background-position: center; /* 👈 centraliza */
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    padding: 0px
   }
 
+  /* OVERLAY ESCURO */
+
+  .empresa-overlay {
+    background: rgba(0, 0, 0, 0.55);
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+  }
+  
   .empresa-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 25px;
+    margin-top: 0px;
+    height: auto;
   }
 
   .empresa-content h2 {
@@ -661,6 +704,7 @@
     justify-content: center;
     padding: 14px 24px;
     font-size: 15px;
+    width: 150%;
   }
 
 }

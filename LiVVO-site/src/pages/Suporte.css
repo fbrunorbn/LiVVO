@@ -78,3 +78,125 @@
 .suporte-btn:hover {
   transform: scale(1.05);
 }
+/* ================= SUPORTE ================= */
+
+.suporte {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+}
+
+.suporte-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* ================= IMAGEM ================= */
+
+.suporte-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.suporte-image img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+
+/* ================= TEXTO ================= */
+
+.suporte-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.suporte-content h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a5e23;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.suporte-content p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* ================= BOTÕES ================= */
+
+.suporte-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.suporte-btn {
+  background-color: #ffffff;
+  color: #25D366;
+  padding: 15px 25px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s ease;
+  width: 250px;
+}
+
+.suporte-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ===================================================== */
+/* ================= MOBILE ============================= */
+/* ===================================================== */
+
+@media (max-width: 768px) {
+
+  .suporte {
+    padding: 60px 20px;
+    min-height: 100vh;
+  }
+
+  .suporte-container {
+    flex-direction: column;   /* 🔥 empilha */
+    text-align: center;
+    gap: 40px;
+  }
+
+  /* imagem em cima */
+  .suporte-image img {
+    max-width: 280px;
+  }
+
+  /* texto menor */
+  .suporte-content h2 {
+    font-size: 28px;
+  }
+
+  .suporte-content p {
+    font-size: 16px;
+  }
+
+  /* botões largura total */
+  .suporte-buttons {
+    align-items: center;
+  }
+
+  .suporte-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}

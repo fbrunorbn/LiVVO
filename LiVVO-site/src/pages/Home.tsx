@@ -10,6 +10,7 @@ import pin from "../assets/Logo-Pin.png";
 import usuario from "../assets/Logo-usuario.png";
 import carro from "../assets/Imagem-carro-motorista.jpeg";
 import empresaImg from "../assets/logo-empresa-web.png";
+import empresaImgMobile from "../assets/logo-empresa-mobile.png";
 import whats from "../assets/logo-whats.png";
 import redevaleDesktop from "../assets/logo-redevale.png";
 import redevaleMobile from "../assets/logo-redevale-mobile.png";
@@ -217,10 +218,7 @@ export default function Home() {
 
         {/* ===== SEÇÃO EMPRESA ===== */}
 
-        <section 
-        className="empresa-section" id="empresa"
-        style={{ backgroundImage: `url(${empresaImg})` }}
-        >
+        <section className="empresa-section" id="empresa">
 
         <div className="empresa-overlay">
 
