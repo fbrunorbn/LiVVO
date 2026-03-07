@@ -145,42 +145,36 @@ export default function Home() {
 
       </section>
 
-      {/* ===== SEÇÃO MOTORISTA ===== */}
+      <section className="motorista" id="motorista">
+        <div className="motorista-card">
 
-        <section className="motorista" id="motorista">
+          <div className="motorista-icon">
+            🚗
+          </div>
 
-        {/* LADO ESQUERDO */}
-        <div className="motorista-content">
+          <h2>
+            <span className="branco">SEJA MOTORISTA</span><br/>
+            <span className="laranja">E DIRIJA COM A LIVVO!</span>
+          </h2>
 
-            <h2>
-            Seja um de nossos motoristas e venha lucrar com a gente!
-            </h2>
+          <a
+            href="https://play.google.com/store/apps/details?id=br.com.apps88.taxi.drivermachine"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="motorista-btn"
+          >
+            ↓ BAIXE NOSSO APLICATIVO <br/>
+            E FAÇA SEU CADASTRO
+          </a>
 
-            <p>
-            Baixe o aplicativo da Livvo e junte-se a milhares de 
-            motoristas que mudaram sua vida financeira!
-            </p>
-
-            <a
-              href="https://play.google.com/store/apps/details?id=br.com.apps88.taxi.drivermachine&pcampaignid=web_share"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={googlePlay}
-                alt="Disponível no Google Play"
-                className="google-play-btn"
-              />
-            </a>
+          <p>
+            Venha ganhar <strong>dinheiro com flexibilidade</strong> 
+            e fazer parte do nosso time
+          </p>
 
         </div>
 
-        {/* LADO DIREITO */}
-        <div className="motorista-image">
-            <img src={carro} alt="Carro Livvo" />
-        </div>
-
-        </section>
+      </section>
 
         {/* ===== SEÇÃO APP ===== */}
 

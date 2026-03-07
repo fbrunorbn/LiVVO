@@ -233,77 +233,91 @@
 /* ================= MOTORISTA ================= */
 
 .motorista {
+  height: 100vh;
+  background-image: url("../assets/carro.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   display: flex;
-  height: calc(100vh - 60px); /* 60px = altura do header */
-  background: #3f3f3f;
+  justify-content: center;   /* 🔥 centraliza corretamente */
+  align-items: flex-start;
+  padding-top: 70px;
 }
 
-/* 50% FIXO */
-.motorista-content,
-.motorista-image {
-  flex: 0 0 50%;
-}
+/* CARD */
+.motorista-card {
+  width: 600px;
+  padding: 70px 50px 130px 50px;
 
-/* TEXTO */
-.motorista-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertical */
-  align-items: center;     /* 👈 centraliza horizontal */
+  border-radius: 55px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(75, 0, 130, 0.95) 0%,
+    rgba(90, 0, 170, 0.85) 40%,
+    rgba(120, 0, 255, 0.65) 70%,
+    rgba(120, 0, 255, 0.0) 100%
+  );
+
   text-align: center;
-  padding: 80px;
   color: white;
-  gap: 30px;
 }
 
-.motorista-content h2 {
-  font-size: 40px;
-  font-weight: 700;
+/* ÍCONE */
+.motorista-icon {
+  font-size: 34px;
+  margin-bottom: 15px;
   color: #ff5a00;
-  line-height: 1.2;
-  margin-bottom: 25px;
+}
+
+/* TÍTULO */
+.motorista-card h2 {
   font-family: 'Chau Philomene One', sans-serif;
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 35px;
+  text-transform: uppercase;
 }
 
-.motorista-content p {
-  font-size: 16px;
-  margin-bottom: 30px;
-  opacity: 0.9;
+.branco {
+  color: white;
 }
 
-/* BOTÃO GOOGLE PLAY */
-.google-play-btn {
-  width: 180px;
-  cursor: pointer;
+.laranja {
+  color: #ff5a00;
+}
+
+/* BOTÃO */
+.motorista-btn {
+  display: inline-block;
+  background: #ff5a00;
+  color: white;
+  padding: 18px 35px;
+  border-radius: 45px;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 35px;
   transition: 0.3s;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  border: #f4f4f4 1px solid;
-
+  line-height: 1.4;
 }
 
-.google-play-btn:hover {
+.motorista-btn:hover {
   transform: scale(1.05);
 }
 
-.motorista-image {
-  display: flex;
-  justify-content: flex-end; /* direita */
-  align-items: center;       /* meio vertical */
-  height: 100%;              /* precisa ter altura */
-  width: 100%;
-  overflow: hidden;
+/* TEXTO */
+.motorista-card p {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
-.motorista-image img {
-  width: 100%;
-  height: auto;  /* melhor que 80% */
-  object-fit: cover;
-  border-top-left-radius: 40px;
-  border-bottom-left-radius: 40px;
+.motorista-card strong {
+  color: #2b0050;
 }
-
 /* ================= APP SECTION ================= */
 
 .app-section {
@@ -611,41 +625,29 @@
     text-align: center;
     font-weight: 400;
   }
+
   /* ================= MOTORISTA ================= */
-
-  .motorista {
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-    justify-content: center;
-    height: auto;        /* 🔥 remove altura fixa */
-    min-height: auto;
-    padding-bottom: 0px;
+    .motorista {
+    padding-top: 40px;
   }
 
-  .motorista-content{
-    padding: 0px;
-  }
-  .motorista-image {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .motorista-image img {
-    width: 80%;
-    border-radius: 18px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+  .motorista-card {
+    width: 90%;
+    padding: 50px 25px 110px 25px;
+    border-radius: 40px;
   }
 
-  .motorista-content h2 {
-    font-size: 22px;
+  .motorista-card h2 {
+    font-size: 26px;
   }
 
-  .google-play-btn {
-    width: 150px;
+  .motorista-btn {
+    font-size: 14px;
+    padding: 14px 20px;
+  }
+
+  .motorista-card p {
+    font-size: 15px;
   }
 
   /* ================= APP SECTION ================= */
