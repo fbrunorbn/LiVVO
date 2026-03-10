@@ -8,10 +8,11 @@ import heroImage from "../assets/logo-segurando-celular-app-fundo-laranja.png";
 import ilustracao from "../assets/Ilutracao_home.png";
 import pin from "../assets/Logo-Pin.png";
 import usuario from "../assets/Logo-usuario.png";
-import carro from "../assets/Imagem-carro-motorista.jpeg";
+import volante from "../assets/Volante.png";
 import whats from "../assets/logo-whats.png";
 import redevaleDesktop from "../assets/Logo-redevale.png";
 import redevaleMobile from "../assets/Logo-redevale-mobile.png";
+import setaBaixo from "../assets/SetaBaixo.png";
 
 export default function Home() {
 
@@ -124,7 +125,7 @@ export default function Home() {
             <img src={usuario} alt="Usuários" />
             <div>
               <h3>
-                <span className="counter" data-target="15">0</span>
+                <span className="counter" data-target="15" style={{ fontSize: "32px", fontFamily: "'Chau Philomene One', sans-serif" }}>0</span>
               </h3>
               <p>Mil Usuários</p>
             </div>
@@ -148,8 +149,8 @@ export default function Home() {
       <section className="motorista" id="motorista">
         <div className="motorista-card">
 
-          <div className="motorista-icon">
-            🚗
+          <div className="volante-icon">
+            <img src={volante} alt="Volante" />
           </div>
 
           <h2>
@@ -163,13 +164,14 @@ export default function Home() {
             rel="noopener noreferrer"
             className="motorista-btn"
           >
-            ↓ BAIXE NOSSO APLICATIVO <br/>
+            <img src={setaBaixo} alt="SetaParaBaixo" />
+            BAIXE NOSSO APLICATIVO <br/>
             E FAÇA SEU CADASTRO
           </a>
 
           <p>
-            Venha ganhar <strong>dinheiro com flexibilidade</strong> 
-            e fazer parte do nosso time
+            Venha ganhar <strong>dinheiro com flexibilidade</strong> <br /> 
+             e fazer parte do nosso time
           </p>
 
         </div>
