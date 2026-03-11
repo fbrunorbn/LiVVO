@@ -292,7 +292,7 @@
     to bottom,
     rgba(75, 0, 130, 0.95) 0%,
     rgba(90, 0, 170, 0.85) 40%,
-    rgba(120, 0, 255, 0.65) 70%,
+    rgba(120, 0, 255, 0.65) 80%,
     rgba(120, 0, 255, 0.0) 100%
   );
 
@@ -352,7 +352,7 @@
 }
 
 .motorista-card strong {
-  color: #3c026e;
+  color: #bd7af7;
 }
 .motorista-btn {
     font-size: 14px;

@@ -62,7 +62,7 @@ export default function Home() {
         <div className="hero-content">
 
           <h1>
-            A forma mais simples de pedir corridas e entregas na sua cidade
+            A forma mais simples de pedir corridas na sua cidade
           </h1>
 
           <p className="hero-subtitle">
@@ -106,8 +106,9 @@ export default function Home() {
         <div className="stats-left">
           <h2>
             A MOBILIDADE <br />
-            QUE ESTÁ TRANSFORMANDO <br />
-            O VALE DO <br /> <span>JAGUARIBE</span>
+            QUE TRANSFORMOU <br />
+            O VALE DO <span>JAGUARIBE</span> <br />
+            EM <span>EXPANSÃO</span>
           </h2>
 
           <p className="hashtag">#VÁDELIVVO</p>
@@ -136,7 +137,8 @@ export default function Home() {
             <img src={usuario} alt="Usuários" />
             <div>
               <h3>
-                <span className="counter" data-target="15" style={{ fontSize: "32px", fontFamily: "'Chau Philomene One', sans-serif" }}>0</span>
+                <span>+</span>
+                <span className="counter" data-target="16" style={{ fontSize: "32px", fontFamily: "'Chau Philomene One', sans-serif" }}>0</span>
               </h3>
               <p>Mil Usuários</p>
             </div>
