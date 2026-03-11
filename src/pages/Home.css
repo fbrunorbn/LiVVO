@@ -66,10 +66,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
 
   color: white;
 
-  gap: 40px;
 }
 
 /* TÍTULO */
@@ -679,11 +679,10 @@
     text-align: center;
 
     width: 100%;
-    max-width: 100%;
     padding: 80px 20px 60px;
     margin: 0;
 
-    height: calc(100vh);
+    height: calc(100% - 60px);
   }
 
   /* ================= HERO CONTENT ================= */
