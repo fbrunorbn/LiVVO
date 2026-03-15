@@ -278,7 +278,7 @@ export default function Home() {
                         <a href="mailto:livvocar@gmail.com" className="contato-item-btn purple-btn">
                             {/* Substitua por um ícone de email se tiver */}
                             <span className="icon">✉️</span> 
-                            Peça Cotação: livvocar@gmail.com
+                            Peça Cotação: Livvocar@gmail.com
                         </a>
                     </div>
 
